@@ -1,0 +1,246 @@
+.main{
+    opacity: 0.75;
+    height: 100vh;
+    display: grid;
+    justify-content: center ;
+    align-items: center;
+    position: relative;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+
+    gap: 30px;
+
+    background-image: url(./bg-bottom.svg), url(./bg-top.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom left, top right; 
+}
+.ourprice{
+    text-align: center;
+    opacity: 0.6;
+}
+.container{
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 20px;
+}
+.priceContainer{
+    border-radius: 10px;
+    width: 80vw;
+    height: 55vh;
+    display: grid;
+    grid-template-areas: 'top' 'price' 'details' 'bt';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    box-shadow: 5px 5px 15px darkgray;
+    transition: transform 0.5s, box-shadow 0.3s;
+}
+
+.productprice{
+    grid-area: price;
+    font-size: 50px;
+    justify-self: center;
+    margin: 0px;
+}
+header{
+    padding-top: 30px;
+    grid-area: top;
+    justify-self: center;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.button{
+    margin-top: 20px;
+    grid-area: bt;
+    border-radius: 10px;
+    border: 0px;
+    height: 5vh;
+    width: 70vw;
+    font-weight: bold;
+    justify-self: center;
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%))
+}
+.details{
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+}
+.line{
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    width: 80%;
+    font-size: 15px;
+    grid-area: line1;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+}
+
+
+.priceContainer:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 25px darkgray;
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 67%, 64%));
+    color: white;
+}
+
+.priceContainer:hover .button{
+    background-image: linear-gradient(hsl(0, 100%, 100%), hsl(0, 100%, 100%));
+    color: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));    
+}
+
+.priceContainer:hover .line{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+
+/* .maincard {
+    box-shadow: 10px 10px 25px darkgray;
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 67%, 64%));
+    color: white;
+    opacity: 1;
+    box-shadow: 0px 0px 0px;
+}
+
+.maincard .button{
+    background-image: linear-gradient(hsl(0, 100%, 100%), hsl(0, 100%, 100%));
+    color: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));    
+}
+
+.maincard .line{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.button:hover{
+    background-image: linear-gradient(hsl(0, 100%, 100%), hsl(0, 100%, 100%));
+    color: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border: 1px solid;
+}
+
+.mainbut:hover{
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 67%, 64%));
+    color: white;
+} */
+
+
+
+
+.ATM{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+/* toggle button */
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.toggle-switch input:checked+.slider {
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+}
+
+.toggle-switch input:checked+.slider::before {
+    transform: translateX(26px);
+}
+
+/* toggle button */
+
+
+
+
+@media(min-width: 700px){
+    .priceContainer {
+        width: 50vw;
+        height: 50vh;
+    }
+    .button {
+        width: 43vw;
+        height: 6vh;
+    }
+    .ourprice {
+        font-size: 40px;
+    }
+    .main {
+        gap: 40px;
+    }
+    header {
+        font-size: 35px;
+    }
+    .details {
+        font-size: 18px;
+    }
+    .line {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+
+@media (min-width:1025px){
+    /* .maincard{
+        transform: scale(1.1);
+    } */
+    .priceContainer{
+        width: 25vw;
+        height: 50vh;
+    }
+    .container{
+        flex-direction: row;
+    }
+    .button{
+        width: 20vw;
+    }
+    .ourprice{
+        font-size: 50px;
+        margin: 0px;
+    }
+}
