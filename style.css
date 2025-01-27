@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Montserrat", serif;
+}
 .main{
     opacity: 0.75;
     height: 100vh;
@@ -21,11 +28,10 @@
 }
 .container{
     display: flex;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap : 20px;
+    gap : 5px;
 }
 .priceContainer{
     border-radius: 10px;
@@ -76,7 +82,6 @@ header{
 }
 .line{
     border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
     width: 80%;
     font-size: 15px;
     grid-area: line1;
@@ -87,22 +92,35 @@ header{
     padding: 20px;
 }
 
+#lastline{
+    border-bottom: 1px solid gray;
+}
+
+.dollar{
+    font-size: 30px;
+    align-self: center;
+    justify-self: center;
+}
 
 /* .priceContainer:hover {
-    transform: scale(1.05);
+    transform: scale(1.09);
     box-shadow: 10px 10px 25px darkgray;
     background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 67%, 64%));
     color: white;
 }
 
 .priceContainer:hover .button{
-    background-image: linear-gradient(hsl(0, 100%, 100%), hsl(0, 100%, 100%));git
+    background-image: linear-gradient(hsl(0, 100%, 100%), hsl(0, 100%, 100%));
     color: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));    
 }
 
 .priceContainer:hover .line{
     border-top: 1px solid white;
+}
+
+.priceContainer:hover #lastline{
     border-bottom: 1px solid white;
+
 } */
 
 
@@ -121,7 +139,11 @@ header{
 
 .maincard .line{
     border-top: 1px solid white;
+}
+
+.maincard #lastline{
     border-bottom: 1px solid white;
+
 }
 
 .button:hover{
@@ -134,9 +156,6 @@ header{
     background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 67%, 64%));
     color: white;
 }
-
-
-
 
 .ATM{
     width: 100vw;
